@@ -1,0 +1,4 @@
+SpringMybatis
+=============
+
+spring + mybatis scaffold
