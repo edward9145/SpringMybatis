@@ -43,4 +43,10 @@ public class UserServiceImpl implements UserService{
 		return user.getId();
 	}
 
+	@Override
+	public String remove(String id) {
+		userMapper.remove(id);
+		return id;
+	}
+
 }

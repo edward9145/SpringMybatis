@@ -96,7 +96,26 @@ public class UserController {
 		return "user/option";
 	}
 	
-	
+	@RequestMapping("/remove")
+	public String remove(String password, HttpServletRequest request, Model model) {
+		if(StringUtils.isBlank(password)){
+			model.addAttribute("msg", Str.password_null);
+			return "user/remove";
+		}
+		password = DigestUtils.md5Hex(password);
+		
+		User user = (User) request.getSession().getAttribute("user");
+		model.addAttribute("user", user);
+		
+		if(user.getPassword().equals(password)){
+			userService.remove(user.getId());
+			model.addAttribute("msg", user.getUsername() + " removed");
+			return "user/login";
+		}
+		model.addAttribute("msg", Str.password_error);
+		return "user/remove";
+		
+	}
 	
 	@RequestMapping("/json")
 	@ResponseBody

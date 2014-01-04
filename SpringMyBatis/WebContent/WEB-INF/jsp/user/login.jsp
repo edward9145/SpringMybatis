@@ -14,6 +14,7 @@
 		<input type="password" name="password">
 		<input type="submit">
 	</form>
+<a href="register">register</a>
 </div>
 </body>
 </html>

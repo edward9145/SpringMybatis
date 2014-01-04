@@ -9,8 +9,6 @@
 <body>
 <a href="test">test</a>
 <a href="user/login">user/login</a>
-<a href="user/info">user/info</a>
 <a href="user/register">user/register</a>
-<a href="user/option">user/register</a>
 </body>
 </html>

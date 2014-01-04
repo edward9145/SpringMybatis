@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>User Login</title>
+<title>User Option</title>
 </head>
 <body>
 <div>

@@ -7,6 +7,7 @@ import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 
 import com.web.domain.User;
+import com.web.util.Log;
 
 public class UserInterceptor extends HandlerInterceptorAdapter {
 
@@ -20,8 +21,10 @@ public class UserInterceptor extends HandlerInterceptorAdapter {
 	public void postHandle(HttpServletRequest request,
 			HttpServletResponse response, Object handler,
 			ModelAndView modelAndView) throws Exception {
+		Log.out(modelAndView.getViewName());
 		User user = (User) request.getSession().getAttribute("user");
-		if (user == null && modelAndView != null) {
+		if (user == null && modelAndView != null 
+				&& ! modelAndView.getViewName().equals("user/register")) {
 			modelAndView.setViewName("/user/login");
 		}
 	}

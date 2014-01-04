@@ -19,6 +19,10 @@
 		select * from test_user where username=#{username}
 	</select>
 	
+	<delete id="remove" parameterType="string">
+		delete from test_user where id=#{id}
+	</delete>
+	
 	<insert id="insert" parameterType="User" useGeneratedKeys="true">
 		insert into test_user
 		(id, username, pwd, age, height)

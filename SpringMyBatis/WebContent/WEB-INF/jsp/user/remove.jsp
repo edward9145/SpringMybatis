@@ -4,16 +4,16 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>User Info</title>
+<title>User Remove</title>
 </head>
 <body>
-<p>${user.id}</p>
-<p>${user.username}</p>
-<p>${user.age}</p>
-<p>${user.height}</p>
-
-<a href="option">option</a>
-<a href="remove">remove</a>
-<a href="login">logout</a>
+<div>
+<p>${msg}</p>
+	<form action="remove" method="get">
+		<label>${user.username}</label>
+		<input type="password" name="password">
+		<input type="submit">
+	</form>
+</div>
 </body>
 </html>

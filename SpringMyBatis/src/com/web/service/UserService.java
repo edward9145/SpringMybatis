@@ -11,6 +11,8 @@ public interface UserService {
 	public String register(User user);
 
 	public String update(User user);
+
+	public String remove(String id);
 	
 
 }
