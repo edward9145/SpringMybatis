@@ -34,6 +34,7 @@ public class UserServiceImpl implements UserService{
 		
 		user.setId("" + new Random().nextInt(100000));
 		userMapper.insert(user);
+//		userMapper.insert(user);  @Transactional rollback !
 		return user.getId();
 	}
 

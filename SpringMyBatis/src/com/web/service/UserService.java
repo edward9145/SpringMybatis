@@ -1,5 +1,7 @@
 package com.web.service;
 
+import org.springframework.transaction.annotation.Transactional;
+
 import com.web.domain.User;
 
 public interface UserService {
@@ -8,6 +10,7 @@ public interface UserService {
 
 	public User json(String id);
 
+	@Transactional
 	public String register(User user);
 
 	public String update(User user);
