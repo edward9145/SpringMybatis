@@ -1,4 +1,4 @@
 SpringMybatis
 =============
 
-spring + mybatis scaffold
+spring mvc + mybatis scaffold
