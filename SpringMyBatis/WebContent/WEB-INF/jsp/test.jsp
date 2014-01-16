@@ -7,6 +7,7 @@
 <title>Index</title>
 </head>
 <body>
+<h1>message</h1>
 ${message}
 </body>
 </html>

@@ -11,8 +11,11 @@ import com.web.domain.Test;
 @Controller
 public class TestController {
 	
-	@RequestMapping("/test")
-	public ModelAndView test() {
+	@RequestMapping
+	public void test(){}
+	
+	@RequestMapping("/testmv")
+	public ModelAndView testmv() {
 		String message = "Hello, the path of this page is WEB-INF/jsp/test.jsp";
 		return new ModelAndView("test", "message", message);
 	}
