@@ -11,9 +11,11 @@ import com.web.domain.Test;
 @Controller
 public class TestController {
 	
+	/*
+	This empty mapping will disable the access of static resources(*.js, *.css) !
 	@RequestMapping
 	public void test(){}
-	
+	*/
 	@RequestMapping("/testmv")
 	public ModelAndView testmv() {
 		String message = "Hello, the path of this page is WEB-INF/jsp/test.jsp";
